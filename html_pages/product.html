@@ -9,19 +9,18 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
-    <title>Oribears</title>
+    <title>Oribears - Page produit</title>
   </head>
-
   <body>
     <!--Header-->
     <div class="bg-light">
       <header
         class="container-lg d-flex justify-content-between align-items-center"
       >
-        <a href="./index.html">
-          <img width="65px" src="./images/logo.jpg" alt="Logo Oribears" />
+        <a href="../index.html">
+          <img width="65px" src="../images/logo.jpg" alt="Logo Oribears" />
         </a>
-        <a href="./html_pages/product.html">
+        <a href="./product.html">
           <button type="button" class="btn btn-dark btn-lg">
             Panier
           </button></a
@@ -30,45 +29,24 @@
     </div>
     <!--End header-->
     <!--Main-->
-    <!--Welcome message-->
-    <div class="container-lg">
-      <section class="d-flex">
-        <aside>
-          <img src="./images/logo.png" class="img-fluid" />
-        </aside>
-        <article class="d-flex flex-column align-self-center">
-          <h1>
-            Bienvenue sur Oribears
-          </h1>
-          <h2>
-            Le site d'achat d'ours en peluche fabriqués à la main
-          </h2>
-          <p>
-            Faites votre shopping parmi nos différents produits, disponibles
-            dans de multiples couleurs, et faites vous livrer directement dans
-            votre boîte aux lettres.<br />Bonne visite sur Oribears !
-          </p>
-        </article>
-      </section>
-    </div>
-    <!--End welcome message-->
-    <!--Products-->
-    <main class="container-lg border-right border-left border-secondary">
-      <section id="products"></section>
+    <main class="container-lg">
+      <section id="productsPage"></section>
+      <button id="goToCartBtn" class="btn btn-success">
+        Ajouter au panier
+      </button>
     </main>
-    <!--End products-->
-    <!--End Main-->
+    <!--End main-->
     <!--Footer-->
     <div class="bg-light">
       <footer class="container-lg d-flex justify-content-center">
-        <a href="./index.html"
-          ><img width="40px" src="./images/facebook.png" alt="Logo Facebook"
+        <a href="../index.html"
+          ><img width="40px" src="../images/facebook.png" alt="Logo Facebook"
         /></a>
-        <a href="./index.html"
-          ><img width="40px" src="./images/twitter.png" alt="Logo Twitter"
+        <a href="../index.html"
+          ><img width="40px" src="../images/twitter.png" alt="Logo Twitter"
         /></a>
-        <a href="./index.html"
-          ><img width="40px" src="./images/linkedin.png" alt="Logo LinkedIn"
+        <a href="../index.html"
+          ><img width="40px" src="../images/linkedin.png" alt="Logo LinkedIn"
         /></a>
       </footer>
     </div>
@@ -89,7 +67,7 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
-    <script src="./scripts/products.js"></script>
+    <script src="../scripts/productPage.js"></script>
     <!--End Scripts-->
   </body>
 </html>
