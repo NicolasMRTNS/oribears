@@ -1,17 +1,4 @@
-// Encrage du HTML
-let products = document.getElementById("products");
-// Création des éléments HTML
-let productPicture = document.createElement("img");
-let productName = document.createElement("h3");
-let productPrice = document.createElement("p");
-let productDescription = document.createElement("p");
 let productBtn = document.createElement("button");
-let productLink = document.createElement("a");
-// Class Bootstrap des éléments
-const imgClass = ["img-fluid", "mx-auto"];
-const btnClass = ["btn", "btn-secondary"];
-const articleClass = ["mb-5"];
-
 // Fetch à l'API
 fetch("http://localhost:3000/api/teddies")
   .then((response) => response.json())

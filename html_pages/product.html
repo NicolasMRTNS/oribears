@@ -31,9 +31,23 @@
     <!--Main-->
     <main class="container-lg">
       <section id="productsPage"></section>
-      <button id="goToCartBtn" class="btn btn-success">
+      <button type="button" id="addToCartBtn" class="btn btn-success mb-3">
         Ajouter au panier
       </button>
+      <a href="../index.html">
+        <button type="button" id="goToCartBtn" class="btn btn-warning mb-3">
+          Voir mon panier
+        </button></a
+      >
+      <a href="../index.html">
+        <button
+          type="button"
+          id="goBackToShopping"
+          class="btn btn-primary mb-3"
+        >
+          Retourner à la page principale
+        </button>
+      </a>
     </main>
     <!--End main-->
     <!--Footer-->
@@ -68,6 +82,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="../scripts/productPage.js"></script>
+    <script src="../scripts/globalScript.js"></script>
     <!--End Scripts-->
   </body>
 </html>

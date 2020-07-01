@@ -1,14 +1,3 @@
-let productPage = document.getElementById("productsPage");
-let storedProduct = localStorage.getItem("id");
-let productPicture = document.createElement("img");
-let productName = document.createElement("h3");
-let productPrice = document.createElement("p");
-let productDescription = document.createElement("p");
-let dropdownList = document.createElement("select");
-
-const imgClass = ["img-fluid", "mx-auto", "mt-3", "align-self-center"];
-const articleClass = ["mb-3"];
-
 fetch("http://localhost:3000/api/teddies")
   .then((response) => response.json())
   .then((response) => {
@@ -16,7 +5,7 @@ fetch("http://localhost:3000/api/teddies")
     while (i < response.length) {
       if (response[i]._id === storedProduct) {
         productPicture.src = response[i].imageUrl;
-        productPicture.classList.add(...imgClass);
+        productPicture.classList.add(...imgClass1);
         productName.innerHTML = response[i].name;
         productPrice.innerHTML = `Prix : ${response[i].price / 100}€`;
         productDescription.innerHTML = response[i].description;
@@ -39,3 +28,11 @@ fetch("http://localhost:3000/api/teddies")
       i++;
     }
   });
+
+document.getElementById("addToCartBtn").addEventListener("click", function () {
+  localStorage.setItem("name", productName.innerHTML);
+  localStorage.setItem("price", productPrice.innerHTML);
+  document.getElementById("addToCartBtn").innerHTML =
+    "Article ajouté avec succés à votre panier";
+  cart();
+});
