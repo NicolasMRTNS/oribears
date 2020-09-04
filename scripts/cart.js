@@ -14,6 +14,7 @@ document.getElementById(
 let e = document.getElementById("quantity");
 let price = localStorage.getItem("price").match(/[0-9]+/g);
 e.onchange = function () {
-  document.getElementById("total-price").innerHTML =
-    price * e.options[e.selectedIndex].value + "€";
+  document.getElementById("total-price").innerHTML = `${
+    price * e.options[e.selectedIndex].value
+  }€`;
 };

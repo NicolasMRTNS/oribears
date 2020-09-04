@@ -35,7 +35,7 @@
           <tr>
             <th scope="col">Produit</th>
             <th scope="col">Prix</th>
-            <th scope="col">ID</th>
+            <th scope="col">ID produit</th>
             <th scope="col">Quantité</th>
           </tr>
         </thead>
@@ -94,18 +94,12 @@
             name="user_adress"
             required
           />
+          <small class="form-text text-muted"
+            >Cette adresse sera également utilisée comme adresse de
+            facturation</small
+          >
         </div>
         <div class="form-row">
-          <div class="form-group col-md-8">
-            <label for="city">Ville</label>
-            <input
-              type="text"
-              class="form-control"
-              id="city"
-              name="user_city"
-              required
-            />
-          </div>
           <div class="form-group col-md-4">
             <label for="zip">Code postal</label>
             <input
@@ -113,6 +107,16 @@
               class="form-control"
               id="zip"
               name="user_zip"
+              required
+            />
+          </div>
+          <div class="form-group col-md-8">
+            <label for="city">Ville</label>
+            <input
+              type="text"
+              class="form-control"
+              id="city"
+              name="user_city"
               required
             />
           </div>
