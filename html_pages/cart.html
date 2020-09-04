@@ -27,8 +27,10 @@
     </div>
     <!--End header-->
     <!--Main-->
+    <!--Panier-->
     <div class="container-lg table-responsive mt-3">
-      <table class="table table-bordered">
+      <h1>Récapitulatif de votre panier</h1>
+      <table class="table table-bordered mt-3">
         <thead>
           <tr>
             <th scope="col">Produit</th>
@@ -40,12 +42,89 @@
         <tbody>
           <tr id="cart-display"></tr>
           <tr>
-            <td scope="row">Total</td>
+            <th scope="row">Total</th>
             <td id="total-price" colspan="3" class="text-right"></td>
           </tr>
         </tbody>
       </table>
     </div>
+    <!--End panier-->
+    <!--Formulaire-->
+    <div class="container-lg mt-3">
+      <h2>Formulaire de commande</h2>
+      <form action="http://localhost:3000/api/teddies/order" method="post">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="name">Nom</label>
+            <input
+              type="text"
+              id="name"
+              name="user_name"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="firstname">Prénom</label>
+            <input
+              type="text"
+              class="form-control"
+              id="firstname"
+              name="user_firstname"
+              required
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="mail">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="mail"
+            name="user_mail"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="adress">Adresse</label>
+          <input
+            type="text"
+            class="form-control"
+            id="adress"
+            name="user_adress"
+            required
+          />
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-8">
+            <label for="city">Ville</label>
+            <input
+              type="text"
+              class="form-control"
+              id="city"
+              name="user_city"
+              required
+            />
+          </div>
+          <div class="form-group col-md-4">
+            <label for="zip">Code postal</label>
+            <input
+              type="number"
+              class="form-control"
+              id="zip"
+              name="user_zip"
+              required
+            />
+          </div>
+        </div>
+        <div class="text-center mb-3">
+          <button type="submit" class="btn btn-primary col-md-2">
+            Envoyer
+          </button>
+        </div>
+      </form>
+    </div>
+    <!--End formulaire-->
     <!--End main-->
     <!--Footer-->
     <div class="bg-light">
