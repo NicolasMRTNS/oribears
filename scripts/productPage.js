@@ -32,5 +32,6 @@ document.getElementById("addToCartBtn").addEventListener("click", function () {
   localStorage.setItem("price", productPrice.innerHTML);
   document.getElementById("addToCartBtn").innerHTML =
     "Article ajouté avec succés à votre panier";
-  // cart();
+  document.getElementById("addToCartBtn").disabled = true;
+  cart();
 });
