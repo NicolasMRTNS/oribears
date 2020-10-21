@@ -15,6 +15,7 @@ let productDescription = document.createElement("p");
 let productBtn = document.createElement("button");
 let productLink = document.createElement("a");
 let dropdownList = document.createElement("select");
+let rowName = document.createElement("td");
 
 // Class Bootstrap des éléments
 const imgClass1 = ["img-fluid", "mx-auto", "mt-3", "align-self-center"];

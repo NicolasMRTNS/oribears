@@ -19,11 +19,33 @@ let tableCol = document.createElement("td");
 //   }€`;
 // };
 
-let test = localStorage.getItem("cartID");
-let test2 = test.split(",");
-for (i in test2) {
-  document.getElementById(
-    "cart-display"
-  ).innerHTML = `<tr><td> ${test2[i]} </td></tr>`;
-  console.log(test2[i]);
+function sortCart() {
+  let test = localStorage.getItem("cartID");
+  let test2 = test.split(",");
+  let i = 0;
+  while (i < test2.length) {
+    let idDisplay = document.createElement("td");
+    idDisplay.innerHTML = test2[i];
+    fetchAPI
+      .then((response) => {
+        let j = 0;
+        while (j < response.length) {
+          if (response[j]._id === test2[i]) {
+            rowName.innerHTML = response[j].name;
+            console.log("salut");
+          }
+          j++;
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    console.log(rowName);
+    let rowDisplay = document.createElement("tr");
+    rowDisplay.innerHTML = idDisplay.outerHTML + rowName.outerHTML;
+    document.getElementById("cart-display").appendChild(rowDisplay);
+    console.log(test2[i]);
+    i++;
+  }
 }
+sortCart();
